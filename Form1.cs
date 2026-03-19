@@ -28,6 +28,7 @@ namespace EchoMessenger
 
             if (typed_msg == "") // 1-4 입력 방어: 공백 또는 기본 안내문 입력 시 전송 차단
                 return;
+            string time = DateTime.Now.ToString("HH:mm:ss"); // 2-2 타임스탬프 생성
             lstEchoWindow.Items.Add(typed_msg);
             txtInput.Clear();  // 1-1 입력창 초기화
             txtInput.Focus();  // 1-2 입력창 포커스 이동
