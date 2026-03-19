@@ -32,6 +32,7 @@
             lstEchoWindow = new ListBox();
             txtInput = new TextBox();
             btnSend = new Button();
+            lblCount = new Label();
             SuspendLayout();
             // 
             // label1
@@ -78,11 +79,24 @@
             btnSend.UseVisualStyleBackColor = false;
             btnSend.Click += button1_Click;
             // 
+            // lblCount
+            // 
+            lblCount.AutoSize = true;
+            lblCount.BackColor = SystemColors.ButtonShadow;
+            lblCount.Font = new Font("한컴 고딕", 12F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            lblCount.Location = new Point(960, 485);
+            lblCount.Name = "lblCount";
+            lblCount.Size = new Size(186, 42);
+            lblCount.TabIndex = 4;
+            lblCount.Text = "메세지 개수:";
+            lblCount.Click += label2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(14F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1510, 744);
+            Controls.Add(lblCount);
             Controls.Add(btnSend);
             Controls.Add(txtInput);
             Controls.Add(lstEchoWindow);
@@ -100,5 +114,6 @@
         private ListBox lstEchoWindow;
         private TextBox txtInput;
         private Button btnSend;
+        private Label lblCount;
     }
 }
