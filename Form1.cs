@@ -34,7 +34,7 @@ namespace EchoMessenger
 
             txtInput.Clear();  // 1-1 입력창 초기화
 
-            lblCount.Text = $"현재 대화: {lstEchoWindow.Items.Count}개";
+            lblCount.Text = $"현재 대화: {lstEchoWindow.Items.Count}개"; // 2-4 메시지 카운팅
 
             txtInput.Focus();  // 1-2 입력창 포커스 이동
         }
