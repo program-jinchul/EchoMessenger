@@ -47,21 +47,24 @@
             // 
             // lstEchoWindow
             // 
+            lstEchoWindow.Font = new Font("맑은 고딕", 15F);
             lstEchoWindow.FormattingEnabled = true;
             lstEchoWindow.Location = new Point(12, 86);
             lstEchoWindow.Name = "lstEchoWindow";
-            lstEchoWindow.Size = new Size(904, 516);
+            lstEchoWindow.Size = new Size(904, 490);
             lstEchoWindow.TabIndex = 1;
             lstEchoWindow.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // txtInput
             // 
+            txtInput.Font = new Font("맑은 고딕", 15F);
             txtInput.Location = new Point(12, 628);
             txtInput.Multiline = true;
             txtInput.Name = "txtInput";
             txtInput.Size = new Size(904, 78);
             txtInput.TabIndex = 2;
             txtInput.TextChanged += textBox1_TextChanged;
+            txtInput.KeyDown += txtInput_KeyDown;
             // 
             // btnSend
             // 

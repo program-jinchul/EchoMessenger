@@ -24,9 +24,21 @@ namespace EchoMessenger
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string typed_msg = txtInput.Text;
+            string typed_msg = txtInput.Text.Trim();
+
+            if (typed_msg == "") return;
             lstEchoWindow.Items.Add(typed_msg);
             txtInput.Clear();
+            txtInput.Focus();
+        }
+
+        private void txtInput_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1_Click(sender, e);
+                e.SuppressKeyPress = true;
+            }
         }
     }
 }
