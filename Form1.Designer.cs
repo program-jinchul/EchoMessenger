@@ -33,6 +33,7 @@
             txtInput = new TextBox();
             btnSend = new Button();
             lblCount = new Label();
+            btnClear = new Button();
             SuspendLayout();
             // 
             // label1
@@ -64,6 +65,7 @@
             txtInput.Name = "txtInput";
             txtInput.Size = new Size(904, 78);
             txtInput.TabIndex = 2;
+            txtInput.Text = "hi";
             txtInput.TextChanged += textBox1_TextChanged;
             txtInput.KeyDown += txtInput_KeyDown;
             // 
@@ -91,11 +93,24 @@
             lblCount.Text = "메세지 개수:";
             lblCount.Click += label2_Click;
             // 
+            // btnClear
+            // 
+            btnClear.BackColor = Color.FromArgb(255, 192, 192);
+            btnClear.Font = new Font("한컴 말랑말랑 Bold", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            btnClear.Location = new Point(1184, 628);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(181, 78);
+            btnClear.TabIndex = 5;
+            btnClear.Text = "초기화";
+            btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += button1_Click_1;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(14F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1510, 744);
+            ClientSize = new Size(1406, 744);
+            Controls.Add(btnClear);
             Controls.Add(lblCount);
             Controls.Add(btnSend);
             Controls.Add(txtInput);
@@ -115,5 +130,6 @@
         private TextBox txtInput;
         private Button btnSend;
         private Label lblCount;
+        private Button btnClear;
     }
 }
