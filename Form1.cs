@@ -61,16 +61,28 @@ namespace EchoMessenger
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            // 3-1 전체 초기화: ListBox 모든 항목 삭제
+            // 3-2 전체 초기화: ListBox 모든 항목 삭제
             lstEchoWindow.Items.Clear();
 
-            // 3-2 개수 초기화
+            // 3-3 개수 초기화
             lblCount.Text = "현재 대화: 0개";
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void btnDelete_Click_1(object sender, EventArgs e)
         {
+            // 3-4 선택 항목 삭제: 선택된 인덱스가 있을 때만 삭제
+            if (lstEchoWindow.SelectedIndex != -1)
+            {
+                lstEchoWindow.Items.RemoveAt(lstEchoWindow.SelectedIndex);
 
+                // 3-5 삭제 후 메시지 개수 업데이트
+                lblCount.Text = $"현재 대화: {lstEchoWindow.Items.Count}개";
+            }
+            else
+            {
+                // 3-6 예외 처리: 선택 없이 삭제 시 경고
+                MessageBox.Show("삭제할 메시지를 선택하세요.");
+            }
         }
     }
 }

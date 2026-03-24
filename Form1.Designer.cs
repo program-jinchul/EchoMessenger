@@ -34,6 +34,7 @@
             btnSend = new Button();
             lblCount = new Label();
             btnClear = new Button();
+            btnDelete = new Button();
             SuspendLayout();
             // 
             // label1
@@ -105,11 +106,24 @@
             btnClear.UseVisualStyleBackColor = false;
             btnClear.Click += button1_Click_1;
             // 
+            // btnDelete
+            // 
+            btnDelete.BackColor = Color.FromArgb(255, 128, 128);
+            btnDelete.Font = new Font("한컴 말랑말랑 Bold", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            btnDelete.Location = new Point(1184, 530);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(181, 73);
+            btnDelete.TabIndex = 6;
+            btnDelete.Text = "선택 삭제";
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click_1;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(14F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1406, 744);
+            Controls.Add(btnDelete);
             Controls.Add(btnClear);
             Controls.Add(lblCount);
             Controls.Add(btnSend);
@@ -131,5 +145,6 @@
         private Button btnSend;
         private Label lblCount;
         private Button btnClear;
+        private Button btnDelete;
     }
 }
